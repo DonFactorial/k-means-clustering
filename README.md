@@ -18,10 +18,10 @@ When you execute this algorithm, here's how it looks:
 Even with an unlucky choice of initial centers, we get close to the correct choice of centers after a few iterations. Since this data is simulated, we can even see what the correct answer should have been:
 ![A comparison of the correct clusters with their calculated counterparts](k_means_correct.png)
 
-Only one point was misclassified, and it was a borderline case. In applications, we won't know what the correct clusters should have been and, depending on the circumstances, may wish to include that one point in other cluster even if we did know. k-means clustering minimizes the sum of squared Euclidean distances of each data point to its cluster center. Mathematically, let the data points in each cluster $`n\in\{0,1,...,k-1\}`$ belong to the set $`X_n`$ with center $\bm{m}_n$. Then, k-means clustering minimizes the sum of squared distances, $`SSD`$:
+Only one point was misclassified, and it was a borderline case. In applications, we won't know what the correct clusters should have been and, depending on the circumstances, may wish to include that one point in other cluster even if we did know. k-means clustering minimizes the sum of squared Euclidean distances of each data point to its cluster center. Mathematically, let the data points in each cluster $`\ell\in\{0,1,...,k-1\}`$ belong to the set $`X_\ell`$ with center $\boldsymbol{m}_\ell$. Then, k-means clustering minimizes the sum of squared distances, $`SSD`$:
 
 ```math
-SSD = \sum_{\ell=0}^{k-1} \sum_{\bm{x}_i \in X_\ell} ||\bm{x}_i - \bm{m}_\ell||_2^2
+SSD = \sum_{\ell=0}^{k-1} \sum_{\boldsymbol{x}_i \in X_\ell} ||\boldsymbol{x}_i - \boldsymbol{m}_\ell||_2^2
 ```
 <br>
 A few issues to be aware of:
